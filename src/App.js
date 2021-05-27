@@ -29,21 +29,22 @@ function App() {
         }}
         className='top2'
       >
-        <img src='./images/img3.png'></img>
+        <img src='./images/home@1X.png'></img>
         <p>Layers</p>
         <p>Library</p>
         <p>Transform</p>
-        <img src='./images/img1.png'></img>
-        <img src='./images/img1.png'></img>
-        <img src='./images/img1.png'></img>
-        <img src='./images/img1.png'></img>
-        <div
-          style={{ width: '0px', height: '33px', border: '2px solid black' }}
-        ></div>
-        <img src='./images/img1.png'></img>
-        <img src='./images/img1.png'></img>
-        <img src='./images/img1.png'></img>
-        <img src='./images/img1.png'></img>
+        <div className='container'>
+        <img src='./images/img1.png'className='container'></img>
+        <img src='./images/object-alignment-horizontal@1X.png'className='container'></img>
+        <img src='./images/object-alignment-to-the-left@1X.png'className='container'></img>
+        <img src='./images/horizontal-alignment@1X (1).png'className='container'></img>
+       
+       
+        <img src='./images/object-alignment-at-the-bottom@1X.png'className='container'></img>
+        <img src='./images/object-alignment-to-the-center@1X.png'className='container'></img>
+        <img src='./images/object-alignment-to-the-top@1X.png'className='container'></img>
+        <img src='./images/horizontal-alignment@1X.png'className='container'></img>
+        </div>
       </section>
       <div
         style={{
@@ -61,18 +62,19 @@ function App() {
             marginTop: '1px',
           }}
         >
+          <img src='./images/move@1X.png'></img>
+          <img src='./images/crop (1)@1X.png'></img>
+          <img src='./images/line@1X.png'></img>
           <img src='./images/img5.png'></img>
+          <img src='./images/pen-tool@1X.png'></img>
+          <img src='./images/img3.png'></img>
+          <img src='./images/text@1X.png'></img>
+          <img src='./images/paintbrush@1X.png'></img>
+          <img src='./images/pallete@1X.png'></img>
+          <img src='./images/paint-bucket@1X.png'></img>
+          <img src='./images/zoom (1)@1X.png'></img>
           <img src='./images/img5.png'></img>
-          <img src='./images/img5.png'></img>
-          <img src='./images/img5.png'></img>
-          <img src='./images/img5.png'></img>
-          <img src='./images/img5.png'></img>
-          <img src='./images/img5.png'></img>
-          <img src='./images/img5.png'></img>
-          <img src='./images/img5.png'></img>
-          <img src='./images/img5.png'></img>
-          <img src='./images/img5.png'></img>
-          <img src='./images/img5.png'></img>
+         <div class="abc"> <img src='./images/presentation@1X.png'></img></div>
         </div>
         <canvas
           style={{ width: '70vw', height: '100vh', backgroundColor: '#E4E4E4' }}
@@ -86,7 +88,7 @@ function App() {
           }}
         >
           <div>
-            <img src='./images/img4.png'></img>
+            <img src='./images/img1.png'></img>
             <p>Templates</p>
           </div>
           <div>
@@ -98,8 +100,8 @@ function App() {
             <p>Templates</p>
           </div>
           <div>
-            <img src='./images/img4.png'></img>
-            <p>Templates</p>
+            <img src='./images/Videos@1X.png'></img>
+            <p>Videos</p>
           </div>
         </div>
       </div>
