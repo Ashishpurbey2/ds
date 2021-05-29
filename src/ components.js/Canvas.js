@@ -10,6 +10,7 @@ const Canvas = () => {
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: '100px',
+        marginBottom: '20px',
       }}
       className='canvas'
     ></canvas>

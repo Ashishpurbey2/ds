@@ -3,7 +3,7 @@ import { DropdownButton, Dropdown } from 'react-bootstrap'
 
 const Dropdown1 = () => {
   return (
-    <DropdownButton id='dropdown-item-button' title='Hello' className='drop'>
+    <DropdownButton id='dropdown-item-button' title='View' className='drop'>
       <Dropdown.Item as='button' className='dropitem1'>
         <img src='./images/img1.png'></img>
       </Dropdown.Item>
