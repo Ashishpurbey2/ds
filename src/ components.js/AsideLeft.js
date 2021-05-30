@@ -19,18 +19,18 @@ const AsideLeft = () => {
       }}
       className='asideLeft'
     >
-      <img src='./images/move@1X.png' alt=""></img>
-      <img src='./images/crop (1)@1X.png' alt=""></img>
-      <img src='./images/line@1X.png' alt=""></img>
-      <img src='./images/img5.png' alt=""></img>
-      <img src='./images/pen-tool@1X.png' alt=""></img>
-      <img src='./images/img3.png' alt=""></img>
-      <img src='./images/text@1X.png' alt=""></img>
-      <img src='./images/paintbrush@1X.png' alt=""></img>
-      <img src='./images/pallete@1X.png' alt=""></img>
-      <img src='./images/paint-bucket@1X.png' alt=""></img>
-      <img src='./images/zoom (1)@1X.png' alt=""></img>
-      <img src='./images/img5.png' alt=""></img>
+      <img style={{cursor:"pointer"}} src='./images/move@1X.png' alt="" ></img>
+      <img style={{cursor:"pointer"}} src='./images/crop (1)@1X.png' alt=""></img>
+      <img style={{cursor:"pointer"}} src='./images/line@1X.png' alt=""></img>
+      <img style={{cursor:"pointer"}} src='./images/img5.png' alt=""></img>
+      <img style={{cursor:"pointer"}} src='./images/pen-tool@1X.png' alt=""></img>
+      <img style={{cursor:"pointer"}} src='./images/img3.png' alt=""></img>
+      <img style={{cursor:"pointer"}} src='./images/text@1X.png' alt=""></img>
+      <img style={{cursor:"pointer"}} src='./images/paintbrush@1X.png' alt=""></img>
+      <img style={{cursor:"pointer"}} src='./images/pallete@1X.png' alt=""></img>
+      <img style={{cursor:"pointer"}} src='./images/paint-bucket@1X.png' alt=""></img>
+      <img style={{cursor:"pointer"}} src='./images/zoom (1)@1X.png' alt=""></img>
+      <img style={{cursor:"pointer"}} src='./images/img5.png' alt=""></img>
       <div
         style={{
           // marginTop: `${height + 'px'}`,
