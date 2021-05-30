@@ -24,7 +24,7 @@ const AsideRight = () => {
     >
       <div style={{position:"relative", right:"12px"}}>
       <div class="image-upload">
-        <label for="file-input">
+        <label for="file-input" style={{cursor:"pointer"}}>
             <img src="./images/img4.png"/>
         </label>
         <input id="file-input" type="file" accept="image/*" style={{ display:"none" }}/>
@@ -32,8 +32,8 @@ const AsideRight = () => {
       </div>
       </div>
       <div style={{position:"relative", right:"12px"}}>
-      <div class="image-upload">
-        <label for="file-input">
+      <div class="image-upload" >
+        <label for="file-input" style={{cursor:"pointer"}}>
             <img src="./images/img4.png"/>
         </label>
         <input id="file-input" type="file" accept="image/*" style={{ display:"none" }}/>
@@ -42,7 +42,7 @@ const AsideRight = () => {
       </div>
       <div style={{position:"relative", right:"12px"}}>
       <div class="image-upload">
-        <label for="file-input">
+        <label for="file-input" style={{cursor:"pointer"}}>
             <img src="./images/img4.png"/>
         </label>
         <input id="file-input" type="file" accept="image/*" style={{ display:"none" }}/>
@@ -51,7 +51,7 @@ const AsideRight = () => {
       </div>
       <div style={{position:"relative", right:"12px"}}>
       <div class="image-upload">
-        <label for="file-input">
+        <label for="file-input" style={{cursor:"pointer"}}>
             <img src="./images/Videos@1X.png"/>
         </label>
         <input id="file-input" type="file" accept="image/*" style={{ display:"none" }}/>
