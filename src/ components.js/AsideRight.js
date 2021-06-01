@@ -18,45 +18,24 @@ const AsideRight = () => {
         marginTop: '85px',
         position: 'fixed',
         left: `${width + 'px'}`,
-        textAlign:"center"
       }}
       className='asideRight'
     >
-      <div style={{position:"relative", right:"12px"}}>
-      <div class="image-upload">
-        <label for="file-input" style={{cursor:"pointer"}}>
-            <img src="./images/img4.png"/>
-        </label>
-        <input id="file-input" type="file" accept="image/*" style={{ display:"none" }}/>
-        <p className='extraMargin'>Templates</p>
+      <div>
+        <img src='./images/img4.png'></img>
+        <p>Templates</p>
       </div>
+      <div>
+        <img src='./images/img4.png'></img>
+        <p className='extraMargin'>uploads</p>
       </div>
-      <div style={{position:"relative", right:"12px"}}>
-      <div class="image-upload" >
-        <label for="file-input" style={{cursor:"pointer"}}>
-            <img src="./images/img4.png"/>
-        </label>
-        <input id="file-input" type="file" accept="image/*" style={{ display:"none" }}/>
-        <p className='extraMargin'>Uploads</p>
-      </div>
-      </div>
-      <div style={{position:"relative", right:"12px"}}>
-      <div class="image-upload">
-        <label for="file-input" style={{cursor:"pointer"}}>
-            <img src="./images/img4.png"/>
-        </label>
-        <input id="file-input" type="file" accept="image/*" style={{ display:"none" }}/>
+      <div>
+        <img src='./images/img4.png'></img>
         <p className='extraMargin'>Pictures</p>
       </div>
-      </div>
-      <div style={{position:"relative", right:"12px"}}>
-      <div class="image-upload">
-        <label for="file-input" style={{cursor:"pointer"}}>
-            <img src="./images/Videos@1X.png"/>
-        </label>
-        <input id="file-input" type="file" accept="image/*" style={{ display:"none" }}/>
+      <div>
+        <img src='./images/Videos@1X.png'></img>
         <p className='extraMargin'>Videos</p>
-      </div>
       </div>
     </div>
   )
