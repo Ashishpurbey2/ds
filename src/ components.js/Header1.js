@@ -9,6 +9,7 @@ const Header1 = () => {
         height: '41px',
         backgroundColor: '#E4E4E4',
         position: 'fixed',
+        zIndex:"10"
       }}
       className='top1'
     >

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../assets/css/HomeScreen.css'
 import Header1 from '../ components.js/Header1'
 import Header2 from '../ components.js/Header2'
@@ -7,7 +7,48 @@ import AsideLeft from '../ components.js/AsideLeft'
 import AsideRight from '../ components.js/AsideRight'
 import Canvas from '../ components.js/Canvas'
 
+
 const HomeScreen = () => {
+
+  const [ id, setId] = useState(0)
+  const [ color , setColor ] = useState({})
+  const [ visible, setVisible ] = useState(true)
+  
+  const [ rects, setRect ] = useState([
+    // {
+    //   x:10,
+    //   y:10,
+    //   width:200,
+    //   height:200,
+    //   fill:"blue"
+    // }
+  ])
+
+  function selectShape(color){
+    console.log(color)
+    setId(id+1)
+    setRect(
+      rects.concat(
+      {
+        x:10,
+        y:10,
+        width:100,
+        height:100,
+        fill:color,
+        id:`rect${id}`
+      })
+    )
+  }
+  
+  function onColorChange(color){
+    setColor(color)
+  }
+
+  function isVisible(visible){
+    console.log(visible)
+    setVisible(!visible)
+  }
+
   return (
     <div
       className='body1'
@@ -24,8 +65,8 @@ const HomeScreen = () => {
         }}
         className='aside'
       >
-        <AsideLeft />
-        <Canvas />
+        <Canvas rects = {rects} setRect={setRect} color={color} visible={visible}/>
+        <AsideLeft onSelect={selectShape} isVisible={isVisible} onColorChange={onColorChange}/>
         <AsideRight />
       </div>
     </div>
