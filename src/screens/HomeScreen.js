@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState,useEffect } from 'react'
 import '../assets/css/HomeScreen.css'
 import Header1 from '../ components.js/Header1'
 import Header2 from '../ components.js/Header2'
@@ -7,14 +7,16 @@ import AsideLeft from '../ components.js/AsideLeft'
 import AsideRight from '../ components.js/AsideRight'
 import Canvas from '../ components.js/Canvas'
 
-
 const HomeScreen = () => {
+  const [id, setId] = useState(0)
+  const [color, setColor] = useState({})
+  const [visible, setVisible] = useState(true)
+  const [penVisible, setPenVisible] = useState(false)
+ 
 
-  const [ id, setId] = useState(0)
-  const [ color , setColor ] = useState({})
-  const [ visible, setVisible ] = useState(true)
-  
-  const [ rects, setRect ] = useState([
+ 
+
+  const [rects, setRect] = useState([
     // {
     //   x:10,
     //   y:10,
@@ -24,31 +26,32 @@ const HomeScreen = () => {
     // }
   ])
 
-  function selectShape(color){
+  function selectShape(color) {
     console.log(color)
-    setId(id+1)
+    setId(id + 1)
     setRect(
-      rects.concat(
-      {
-        x:10,
-        y:10,
-        width:100,
-        height:100,
-        fill:color,
-        id:`rect${id}`
+      rects.concat({
+        x: 10,
+        y: 10,
+        width: 100,
+        height: 100,
+        fill: color,
+        id: `rect${id}`,
       })
     )
   }
-  
-  function onColorChange(color){
+
+  function onColorChange(color) {
     setColor(color)
   }
 
-  function isVisible(visible){
+  function isVisible(visible) {
     console.log(visible)
     setVisible(!visible)
   }
-
+  function onPenVisible(penVisible) {
+    setPenVisible(!penVisible)
+  }
   return (
     <div
       className='body1'
@@ -65,8 +68,21 @@ const HomeScreen = () => {
         }}
         className='aside'
       >
-        <Canvas rects = {rects} setRect={setRect} color={color} visible={visible}/>
-        <AsideLeft onSelect={selectShape} isVisible={isVisible} onColorChange={onColorChange}/>
+        <Canvas
+          rects={rects}
+          setRect={setRect}
+          color={color}
+          visible={visible}
+          penVisible={penVisible}
+        />
+
+        <AsideLeft
+          onSelect={selectShape}
+          isVisible={isVisible}
+          onColorChange={onColorChange}
+          PenVisible={onPenVisible}
+        />
+        
         <AsideRight />
       </div>
     </div>
