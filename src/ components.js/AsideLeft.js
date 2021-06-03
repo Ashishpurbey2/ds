@@ -126,7 +126,6 @@ const AsideLeft = (props) => {
         src='./images/zoom (1)@1X.png'
         alt=''
       ></img>
-      <img style={{ cursor: 'pointer' }} src='./images/img5.png' alt=''></img>
       <div
         style={{
           // marginTop: `${height + 'px'}`,
