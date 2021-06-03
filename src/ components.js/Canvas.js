@@ -1,8 +1,15 @@
-import React, { useContext, useState, createContext, useEffect } from 'react'
-import { Layer, Rect, Stage } from 'react-konva'
+import React, {
+  useRef,
+  useContext,
+  useState,
+  createContext,
+  useEffect,
+} from 'react'
+import { Layer, Rect, Stage, Line, Text } from 'react-konva'
+import { render } from 'react-dom'
 
 import Rectangle from './shapes/rectangle'
-import Pen from './Pen'
+import { propTypes } from 'react-bootstrap/esm/Image'
 
 export default function Canvas(props) {
   const { rects, setRect, color, visible, penVisible } = props
@@ -14,6 +21,47 @@ export default function Canvas(props) {
       selectShape(null)
     }
   }
+
+  // const [eraserTool, setEraserTool] = React.useState('eraser')
+  const [tool, setTool] = React.useState('pen')
+  const [lines, setLines] = React.useState([])
+  const isDrawing = React.useRef(false)
+
+  const handleMouseDown = (e) => {
+    isDrawing.current = !props.penVisible || !props.eraserVisible
+    const pos = e.target.getStage().getPointerPosition()
+    setLines([...lines, { tool, points: [pos.x, pos.y] }])
+  }
+
+  const handleMouseMove = (e) => {
+    // no drawing - skipping
+    if (!isDrawing.current) {
+      return
+    }
+    const stage = e.target.getStage()
+    const point = stage.getPointerPosition()
+    let lastLine = lines[lines.length - 1]
+    // add point
+    lastLine.points = lastLine.points.concat([point.x, point.y])
+
+    // replace last
+    lines.splice(lines.length - 1, 1, lastLine)
+    setLines(lines.concat())
+  }
+
+  const handleMouseUp = () => {
+    isDrawing.current = false
+  }
+  useEffect(() => {
+    !props.penVisible ? setTool('pen') : setTool('eraser')
+    console.log(penVisible, props.eraserVisible)
+  })
+  useEffect(function () {
+    if (!props.penVisible && !props.eraserVisible) {
+      setTool('pen')
+    }
+  })
+
   return (
     <>
       <Stage
@@ -32,6 +80,9 @@ export default function Canvas(props) {
         className='canvas'
         onMouseDown={checkDeselect}
         onTouchStart={checkDeselect}
+        onMouseDown={handleMouseDown}
+        onMousemove={handleMouseMove}
+        onMouseup={handleMouseUp}
       >
         <Layer>
           {rects.map((rect, i) => {
@@ -53,9 +104,22 @@ export default function Canvas(props) {
               />
             )
           })}
+          {/* pen */}
+          {lines.map((line, i) => (
+            <Line
+              key={i}
+              points={line.points}
+              stroke='black'
+              strokeWidth={5}
+              tension={0.5}
+              lineCap='round'
+              globalCompositeOperation={
+                line.tool === 'eraser' ? 'destination-out' : 'source-over'
+              }
+            />
+          ))}
         </Layer>
       </Stage>
-      <Pen penVisible={penVisible} />
     </>
   )
 }

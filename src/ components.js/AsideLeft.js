@@ -6,14 +6,16 @@ import 'react-color-palette/lib/css/styles.css'
 
 const AsideLeft = (props) => {
   const [color, setColor] = useColor('hex', '#121212')
-  const [pen, setPen] = useState(true)
+  const [pen, setPen] = useState(false)
+  const [eraser,setEraser] = useState(false)
   useEffect(() => {
     props.onColorChange(color)
     props.PenVisible(pen)
+    props.EraserVisible(eraser)
   })
 
   const [visible, setVisible] = useState(true)
-  const [penVisible,setPenVisible] = useState('false')
+  const [penVisible, setPenVisible] = useState('false')
   const [height, setHeight] = useState(window.innerHeight - 140)
   function myFunction() {
     setHeight(window.innerHeight - 140)
@@ -21,9 +23,15 @@ const AsideLeft = (props) => {
   window.onresize = myFunction
 
   function myFunction2() {
-    pen?setPen(false):setPen(true)
-    
+    pen ? setPen(false) : setPen(true)
   }
+
+  function myFunction3() {
+    eraser?setEraser(false):setEraser(true)
+  }
+
+
+
   return (
     <div
       style={{
@@ -71,7 +79,7 @@ const AsideLeft = (props) => {
         src='./images/line@1X.png'
         alt=''
       ></img>
-      <img style={{ cursor: 'pointer' }} src='./images/img5.png' alt=''></img>
+      <img style={{ cursor: 'pointer' }} onClick={myFunction3} src='./images/img5.png' alt=''></img>
 
       <img
         style={{ cursor: 'pointer' }}

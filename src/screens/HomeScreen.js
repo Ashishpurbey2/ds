@@ -12,6 +12,7 @@ const HomeScreen = () => {
   const [color, setColor] = useState({})
   const [visible, setVisible] = useState(true)
   const [penVisible, setPenVisible] = useState(false)
+  const [eraserVisible,setEraserVisible] = useState(false)
  
 
  
@@ -52,6 +53,12 @@ const HomeScreen = () => {
   function onPenVisible(penVisible) {
     setPenVisible(!penVisible)
   }
+  
+  function onEraserVisible(eraserVisible){
+    setEraserVisible(!eraserVisible)
+  }
+
+
   return (
     <div
       className='body1'
@@ -74,6 +81,7 @@ const HomeScreen = () => {
           color={color}
           visible={visible}
           penVisible={penVisible}
+          eraserVisible={eraserVisible}
         />
 
         <AsideLeft
@@ -81,8 +89,9 @@ const HomeScreen = () => {
           isVisible={isVisible}
           onColorChange={onColorChange}
           PenVisible={onPenVisible}
+          EraserVisible={onEraserVisible}
         />
-        
+
         <AsideRight />
       </div>
     </div>
