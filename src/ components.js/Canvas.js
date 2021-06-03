@@ -58,7 +58,7 @@ export default function Canvas(props) {
   })
   useEffect(function () {
     if (!props.penVisible && !props.eraserVisible) {
-      setTool('pen')
+      setTool('eraser')
     }
   })
 
