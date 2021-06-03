@@ -14,12 +14,19 @@ import { propTypes } from 'react-bootstrap/esm/Image'
 export default function Canvas(props) {
   const { rects, setRect, color, visible, penVisible } = props
   const [selectedId, selectShape] = React.useState(null)
+  
   const checkDeselect = (e) => {
     // deselect when clicked on empty area
     const clickedOnEmpty = e.target === e.target.getStage()
     if (clickedOnEmpty) {
       selectShape(null)
     }
+
+
+    // Ashish
+    isDrawing.current = !props.penVisible || !props.eraserVisible
+    const pos = e.target.getStage().getPointerPosition()
+    setLines([...lines, { tool, points: [pos.x, pos.y] }])
   }
 
   // const [eraserTool, setEraserTool] = React.useState('eraser')
@@ -32,6 +39,7 @@ export default function Canvas(props) {
     const pos = e.target.getStage().getPointerPosition()
     setLines([...lines, { tool, points: [pos.x, pos.y] }])
   }
+  
 
   const handleMouseMove = (e) => {
     // no drawing - skipping
@@ -80,7 +88,7 @@ export default function Canvas(props) {
         className='canvas'
         onMouseDown={checkDeselect}
         onTouchStart={checkDeselect}
-        onMouseDown={handleMouseDown}
+        // onMouseDown={handleMouseDown}
         onMousemove={handleMouseMove}
         onMouseup={handleMouseUp}
       >
@@ -109,7 +117,7 @@ export default function Canvas(props) {
             <Line
               key={i}
               points={line.points}
-              stroke='black'
+              stroke='red'
               strokeWidth={5}
               tension={0.5}
               lineCap='round'
