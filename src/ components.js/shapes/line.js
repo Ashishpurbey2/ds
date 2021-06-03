@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Stage, Layer, Rect, Transformer, Line } from 'react-konva';
 
-const Rectangle = ({ shapeProps, isSelected, onSelect, onChange,color,visible }) => {
+const LineKonva = ({ shapeProps, isSelected, onSelect, onChange,color,visible }) => {
     const shapeRef = React.useRef();
     const trRef = React.useRef();
 
@@ -19,12 +19,12 @@ const Rectangle = ({ shapeProps, isSelected, onSelect, onChange,color,visible })
     return (
       <React.Fragment>
         <Rect
+        draggable={true}
           onClick={()=>{
             onSelect()
           }}
           onTap={onSelect}
           ref={shapeRef}
-          draggable={true}
           {...shapeProps}
           onDragEnd={(e) => {
             onChange({
@@ -70,4 +70,4 @@ const Rectangle = ({ shapeProps, isSelected, onSelect, onChange,color,visible })
       </React.Fragment>
     );
   };
-export default Rectangle;
+export default LineKonva;

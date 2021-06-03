@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { ColorPicker , useColor } from 'react-color-palette'
 import "react-color-palette/lib/css/styles.css";
+import LineDropdown from './Buttons/lineDropdown';
+import LineKonva from './shapes/line';
 
 
 const AsideLeft = (props) => {
@@ -36,6 +38,7 @@ const AsideLeft = (props) => {
       <img style={{cursor:"pointer"}} src='./images/move@1X.png' alt="" ></img>
       <img style={{cursor:"pointer"}} src='./images/crop (1)@1X.png' alt=""></img>
       <img style={{cursor:"pointer"}} src='./images/line@1X.png' alt=""></img>
+      <LineDropdown/>
       <img style={{cursor:"pointer"}} src='./images/img5.png' alt=""></img>
       <img style={{cursor:"pointer"}} src='./images/pen-tool@1X.png' alt="" ></img>
       <img style={{cursor:"pointer"}} src='./images/img3.png' alt="" 

@@ -1,5 +1,6 @@
 import React, {useContext, useState, createContext, useEffect} from 'react'
-import { Layer, Rect, Stage } from 'react-konva'
+import { Layer, Line, Rect, Stage } from 'react-konva'
+import LineKonva from './shapes/line';
 
 import Rectangle from './shapes/rectangle'
 
@@ -39,8 +40,8 @@ export default function Canvas(props){
       <Layer>
         {rects.map((rect,i)=>{
           return(
-            <Rectangle
-            visible = {visible}
+            <LineKonva
+              visible = {visible}
               key={i}
               color = {color}
               shapeProps={rect}
@@ -56,6 +57,18 @@ export default function Canvas(props){
             />
           )}
         )}
+       {/* <LineKonva
+       shapeProps={rect}
+       isSelected={rect.id === selectedId}
+       onSelect={() => {
+         selectShape(rect.id);
+       }}
+       onChange={(newAttrs) => {
+         const r = rects.slice();
+         r[i] = newAttrs;
+         setRect(r);
+       }}
+       /> */}
       </Layer>
     </Stage>
   )
