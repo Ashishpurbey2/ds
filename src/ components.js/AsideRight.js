@@ -66,9 +66,8 @@ const AsideRight = () => {
             },
           }}
         >
-          <h2>Upload File Here</h2>
-          <button>Upload File</button>
-          <button onClick={() => setmodalisOpen(false)}>Close</button>
+          <br/><center><button style={{borderRadius:"5px", width:"10rem", backgroundColor:"white"}}>Upload Media</button></center>
+          {/*<button onClick={() => setmodalisOpen(false)}>Close</button>*/}
         </Modal>
       </div>
     </div>
