@@ -79,11 +79,10 @@ const AsideLeft = (props) => {
         src='./images/line@1X.png'
         alt=''
       ></img>
-      <img style={{ cursor: 'pointer' }} onClick={myFunction3} src='./images/img5.png' alt=''></img>
+      <img style={{ cursor: 'pointer' }} src='./images/img5.png' alt=''></img>
 
       <img
         style={{ cursor: 'pointer' }}
-        onClick={myFunction2}
         src='./images/pen-tool@1X.png'
         alt=''
       ></img>
@@ -92,9 +91,6 @@ const AsideLeft = (props) => {
         style={{ cursor: 'pointer' }}
         src='./images/img3.png'
         alt=''
-        onClick={() => {
-          props.onSelect(color)
-        }}
       ></img>
 
       <img
@@ -110,10 +106,6 @@ const AsideLeft = (props) => {
       <img
         style={{ cursor: 'pointer' }}
         src='./images/pallete@1X.png'
-        onClick={() => {
-          setVisible(!visible)
-          props.isVisible(visible)
-        }}
         alt=''
       />
       <img
