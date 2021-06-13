@@ -22,10 +22,32 @@ const Header1 = () => {
       <div style={{display:view ? "block":"none"}}>
         <Model />
       </div>
-      <p style={{cursor:"pointer"}}>Edit</p>
-      <p style={{cursor:"pointer"}}>View</p>
-      <p style={{cursor:"pointer"}}>Window</p>
-      <p style={{cursor:"pointer"}}>Help</p>
+      <p style={{cursor:"pointer"}} onClick={()=>{
+        setView(!view)
+      }}>Edit</p>
+      <div style={{display:view ? "block":"none"}}>
+        <Model />
+      </div>
+      <p style={{cursor:"pointer"}}  onClick={()=>{
+        setView(!view)
+      }}>View</p>
+      <div style={{display:view ? "block":"none"}} onClick={()=>{
+        setView(!view)
+      }}>
+        <Model />
+      </div>
+      <p style={{cursor:"pointer"}} onClick={()=>{
+        setView(!view)
+      }}>Window</p>
+      <div style={{display:view ? "block":"none"}}>
+        <Model />
+      </div>
+      <p style={{cursor:"pointer"}} onClick={()=>{
+        setView(!view)
+      }}>Help</p>
+      <div style={{display:view ? "block":"none"}}>
+        <Model />
+      </div>
     </section>
   )
 }
