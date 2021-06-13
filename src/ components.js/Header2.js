@@ -13,7 +13,7 @@ const Header2 = () => {
         position: 'fixed',
         display: 'flex',
         flexDirection: 'row',
-        zIndex:"10"
+        // zIndex:"10"
       }}
       className='top2'
     >
