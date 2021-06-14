@@ -1,9 +1,8 @@
 import React from 'react'
 
-const Header2 = () => {
-    return (
-       
-      <section
+const Header2 = (props) => {
+  return (
+    <section
       className='section2'
       style={{
         width: '100%',
@@ -18,9 +17,9 @@ const Header2 = () => {
       className='top2'
     >
       <img src='./images/home@1X.png'></img>
-      <p>Layers</p>
-      <p>Library</p>
-      <p>Transform</p>
+      <p onClick={() => props.onModalLayer(true)}>Layers</p>
+      <p onClick={() => props.onModalLibrary(true)}>Library</p>
+      <p onClick={() => props.onModalTransform(true)}>Transform</p>
 
       <div
         style={{ display: 'flex', flexDirection: 'row' }}
@@ -50,7 +49,7 @@ const Header2 = () => {
         <img src='./images/horizontal-alignment@1X.png'></img>
       </div>
     </section>
-    )
+  )
 }
 
 export default Header2

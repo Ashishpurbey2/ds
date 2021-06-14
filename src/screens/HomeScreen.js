@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../assets/css/HomeScreen.css'
 import Header1 from '../ components.js/Header1'
 import Header2 from '../ components.js/Header2'
@@ -6,17 +6,18 @@ import Dropdown1 from '../ components.js/Dropdown1'
 import AsideLeft from '../ components.js/AsideLeft'
 import AsideRight from '../ components.js/AsideRight'
 import Canvas from '../ components.js/Canvas'
+import Modal from 'react-modal'
+Modal.setAppElement('#root')
 
 const HomeScreen = () => {
   const [id, setId] = useState(0)
   const [color, setColor] = useState({})
   const [visible, setVisible] = useState(true)
   const [penVisible, setPenVisible] = useState(false)
-  const [eraserVisible,setEraserVisible] = useState(false)
- 
-
- 
-
+  const [eraserVisible, setEraserVisible] = useState(false)
+  const [modalLayerisOpen, setmodalLayerisOpen] = useState(false)
+  const [modalLibraryisOpen, setmodalLibraryisOpen] = useState(false)
+  const [modalTransformisOpen, setmodalTransformisOpen] = useState(false)
   const [rects, setRect] = useState([
     // {
     //   x:10,
@@ -53,11 +54,22 @@ const HomeScreen = () => {
   function onPenVisible(penVisible) {
     setPenVisible(!penVisible)
   }
-  
-  function onEraserVisible(eraserVisible){
+
+  function onEraserVisible(eraserVisible) {
     setEraserVisible(!eraserVisible)
   }
 
+  function modalLayer(data) {
+    setmodalLayerisOpen(data)
+    console.log('ashish', data)
+  }
+
+  function modalLibrary(data) {
+    setmodalLibraryisOpen(data)
+  }
+  function modalTransform(data) {
+    setmodalTransformisOpen(data)
+  }
 
   return (
     <div
@@ -67,7 +79,11 @@ const HomeScreen = () => {
     >
       <Dropdown1 />
       <Header1 />
-      <Header2 />
+      <Header2
+        onModalLayer={modalLayer}
+        onModalLibrary={modalLibrary}
+        onModalTransform={modalTransform}
+      />
       <div
         style={{
           backgroundColor: '#E4E4E4',
@@ -91,7 +107,42 @@ const HomeScreen = () => {
           PenVisible={onPenVisible}
           EraserVisible={onEraserVisible}
         />
-
+        <Modal
+          isOpen={
+            modalLayerisOpen || modalLibraryisOpen || modalTransformisOpen
+          }
+          onRequestClose={() => {
+            setmodalLayerisOpen(false)
+            setmodalLibraryisOpen(false)
+            setmodalTransformisOpen(false)
+          }}
+          style={{
+            overlay: {
+              backgroundColor: 'transparent',
+              zIndex: '1',
+            },
+            content: {
+              display: 'absolute',
+              position: 'fixed',
+              color: 'orange',
+              backgroundColor: 'rgb(245,245,245)',
+              left: '51px',
+              bottom: '0px',
+              width: '300px',
+              marginRight: '35px',
+              top: '82px',
+            },
+          }}
+        >
+          {modalLayerisOpen ? (
+            <h1>Layer</h1>
+          ) : modalLibraryisOpen ? (
+            <h1>Library</h1>
+          ) : (
+            <h1>Transform</h1>
+          )}
+          {/* <h1>Layer</h1> */}
+        </Modal>
         <AsideRight />
       </div>
     </div>
