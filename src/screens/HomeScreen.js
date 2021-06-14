@@ -135,11 +135,85 @@ const HomeScreen = () => {
           }}
         >
           {modalLayerisOpen ? (
+            <div>
             <h2 style={{color:"black", textAlign:"center", fontWeight:"lighter"}}>Layers</h2>
-          ) : modalLibraryisOpen ? (
+
+            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/picture@1X (1).png'></img>     Picture</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/picture@1X (1).png'></img>     Picture</span>
+
+
+
+
+
+
+            </div>
+          ) :
+           modalLibraryisOpen ? (
+             <div>
             <h2 style={{color:"black", textAlign:"center", fontWeight:"lighter"}}>Library</h2>
-          ) : (
+            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/picture@1X (1).png'></img>     Picture</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/picture@1X (1).png'></img>     Picture</span>
+
+
+
+
+
+
+            </div>
+          ) : (<div>
             <h2 style={{color:"black", textAlign:"center", fontWeight:"lighter"}}>Transform</h2>
+
+            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/picture@1X (1).png'></img>     Picture</span>
+            <br></br>
+            <br></br>
+            <span style={{color:"black"}}><img src='./images/picture@1X (1).png'></img>     Picture</span>
+
+
+
+
+
+
+            </div>
           )}
           {/* <h1>Layer</h1> */}
         </Modal>
