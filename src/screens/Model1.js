@@ -7,51 +7,49 @@ export default function Model1() {
         <div className="Total">
             <div className="inside">
         <div className="textGrid">
-           <span>New...</span> 
-           <span>Ctrl + N</span> 
+           <span>Undo</span> 
+           <span>Ctrl + Z</span> 
         </div>
         <div className="textGrid">
-           <span>Open...</span> 
-           <span>Ctrl + 0</span> 
-        </div>
-        <div className="textGrid">
-           <span>Open More...</span>
-           <span>
-            <IoMdArrowDropright size="25px"/>
-           </span> 
+           <span>Redo</span> 
+           <span>Shift + Ctrl + Z</span> 
         </div>
         <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
         <div className="textGrid">
-           <span>Close...</span> 
-           <span>Alt + F4</span> 
+           <span>Cut</span>
+           <span>Ctrl + X</span>
         </div>
         <div className="textGrid">
-            <span>Rename...</span>
-        </div >
-        <div className="textGrid">
-           <span>Save...</span> 
-           <span>Ctrl + S</span> 
+           <span>Copy</span> 
+           <span>Ctrl + C</span> 
         </div>
         <div className="textGrid">
-            <span>Save As...</span> 
-           <span>Shift + Ctrl + S</span> 
+           <span>Paste</span> 
+           <span>Ctrl + V</span> 
         </div>
         <div className="textGrid">
-            <span>sjdn</span>
-        </div>
-        <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
-        <div className="textGrid">
-            <span>Export</span>
-            <span>
-            <IoMdArrowDropright size="25px"/>
-           </span>
+           <span>Clear</span> 
+           <span>Delete</span> 
         </div>
         <div className="textGrid">
-            <span>Export Layers</span>
+            <span>Select All</span> 
+           <span>Ctrl + A</span> 
+        </div>
+        <div className="textGrid">
+            <span>Deselect All</span>
         </div>
         <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
         <div className="textGrid">
-            <span>File Info</span>
+            <span>Fill...</span> 
+           <span>Shift + F5</span> 
+        </div>
+        <div className="textGrid">
+            <span>Stroke...</span>
+        </div>
+        <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
+        <div className="textGrid">
+           <span>Fade...</span> 
+           <span>Shift + Ctrl + F</span> 
         </div>
         </div>
         </div>

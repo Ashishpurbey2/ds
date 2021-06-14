@@ -7,7 +7,7 @@ export default function Model4() {
         <div className="Total">
             <div className="inside">
         <div className="textGrid">
-           <span>New.....</span> 
+           <span>New...</span> 
            <span>Ctrl + N</span> 
         </div>
         <div className="textGrid">
