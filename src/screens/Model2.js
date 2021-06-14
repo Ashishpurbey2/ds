@@ -7,51 +7,69 @@ export default function Model2() {
         <div className="Total">
             <div className="inside">
         <div className="textGrid">
-           <span>New...</span> 
-           <span>Ctrl + N</span> 
+           <span>Zoom In</span> 
+           <span>Ctrl + +</span> 
         </div>
         <div className="textGrid">
-           <span>Open...</span> 
-           <span>Ctrl + 0</span> 
+           <span>Zoom Out</span> 
+           <span>Ctrl + -</span> 
         </div>
         <div className="textGrid">
-           <span>Open More...</span>
+           <span>Fit The Area</span>
+        <span>Ctrl + O</span> 
+          
+        </div>
+        <div className="textGrid">
+           <span>Pixel to Pixel</span>
+        <span>Ctrl + P</span> 
+          
+        </div>
+        <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
+        <div className="textGrid">
+           <span>Screen Mode</span> 
+
            <span>
             <IoMdArrowDropright size="25px"/>
-           </span> 
-        </div>
-        <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
-        <div className="textGrid">
-           <span>Close...</span> 
-           <span>Alt + F4</span> 
+           </span>
+          
         </div>
         <div className="textGrid">
-            <span>Rename...</span>
+            <span>Show</span>
+            <span>
+            <IoMdArrowDropright size="25px"/>
+           </span>
         </div >
+        <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
         <div className="textGrid">
-           <span>Save...</span> 
-           <span>Ctrl + S</span> 
-        </div>
-        <div className="textGrid">
-            <span>Save As...</span> 
-           <span>Shift + Ctrl + S</span> 
-        </div>
-        <div className="textGrid">
-            <span>Print...</span>
+           <span>Rulers</span> 
+           <span>Ctrl + R</span> 
         </div>
         <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
         <div className="textGrid">
-            <span>Export</span>
+            <span>Layers</span> 
+          
+        </div>
+        <div className="textGrid">
+            <span>Libraries</span>
+        </div>
+        
+        <div className="textGrid">
+            <span>Transform</span>
+            
+        </div>
+        <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
+        <div className="textGrid">
+            <span>Guides</span>
             <span>
             <IoMdArrowDropright size="25px"/>
            </span>
         </div>
+       
         <div className="textGrid">
-            <span>Export Layers</span>
-        </div>
-        <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
-        <div className="textGrid">
-            <span>File Info</span>
+            <span>Grid</span>
+            <span>
+            <IoMdArrowDropright size="25px"/>
+            </span>
         </div>
         </div>
         </div>
