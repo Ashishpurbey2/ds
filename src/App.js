@@ -12,9 +12,9 @@ function App() {
     <Router>
     <div>
       <Switch>
-      <Route exact path="/option">
+      {/* <Route exact path="/option">
         <Model/>
-      </Route>
+      </Route> */}
       <Route path="/">
         <HomeScreen/>
       </Route>

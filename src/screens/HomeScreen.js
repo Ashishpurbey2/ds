@@ -135,7 +135,7 @@ const HomeScreen = () => {
           }}
         >
           {modalLayerisOpen ? (
-            <h2 style={{color:"black", textAlign:"center", fontWeight:"lighter"}}>Layer</h2>
+            <h2 style={{color:"black", textAlign:"center", fontWeight:"lighter"}}>Layers</h2>
           ) : modalLibraryisOpen ? (
             <h2 style={{color:"black", textAlign:"center", fontWeight:"lighter"}}>Library</h2>
           ) : (

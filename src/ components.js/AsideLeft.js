@@ -106,6 +106,10 @@ const AsideLeft = (props) => {
       <img
         style={{ cursor: 'pointer' }}
         src='./images/pallete@1X.png'
+	onClick={() => {
+          setVisible(!visible)
+          props.isVisible(visible)
+        }}
         alt=''
       />
       <img
