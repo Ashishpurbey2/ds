@@ -1,5 +1,9 @@
 import React, {useState} from 'react'
 import Model from '../screens/Model'
+import Model1 from '../screens/Model1'
+import Model2 from '../screens/Model2'
+import Model3 from '../screens/Model3'
+import Model4 from '../screens/Model4'
 
 const Header1 = () => {
   const [ view, setView ] = useState(false)
@@ -26,7 +30,7 @@ const Header1 = () => {
         setView(!view)
       }}>Edit</p>
       <div style={{display:view ? "block":"none"}}>
-        <Model />
+        <Model1 />
       </div>
       <p style={{cursor:"pointer"}}  onClick={()=>{
         setView(!view)
@@ -34,19 +38,19 @@ const Header1 = () => {
       <div style={{display:view ? "block":"none"}} onClick={()=>{
         setView(!view)
       }}>
-        <Model />
+        <Model2/>
       </div>
       <p style={{cursor:"pointer"}} onClick={()=>{
         setView(!view)
       }}>Window</p>
       <div style={{display:view ? "block":"none"}}>
-        <Model />
+        <Model3/>
       </div>
       <p style={{cursor:"pointer"}} onClick={()=>{
         setView(!view)
       }}>Help</p>
       <div style={{display:view ? "block":"none"}}>
-        <Model />
+        <Model4/>
       </div>
     </section>
   )

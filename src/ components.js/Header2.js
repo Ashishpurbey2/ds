@@ -17,9 +17,9 @@ const Header2 = (props) => {
       className='top2'
     >
       <img src='./images/home@1X.png'></img>
-      <p onClick={() => props.onModalLayer(true)}>Layers</p>
-      <p onClick={() => props.onModalLibrary(true)}>Library</p>
-      <p onClick={() => props.onModalTransform(true)}>Transform</p>
+      <p onClick={() => props.onModalLayer(true)} style={{cursor:"pointer"}}>Layers</p>
+      <p onClick={() => props.onModalLibrary(true)} style={{cursor:"pointer"}}>Library</p>
+      <p onClick={() => props.onModalTransform(true)} style={{cursor:"pointer"}}>Transform</p>
 
       <div
         style={{ display: 'flex', flexDirection: 'row' }}

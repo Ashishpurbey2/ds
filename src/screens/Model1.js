@@ -2,7 +2,7 @@ import React from 'react'
 import './style.css'
 import { IoMdArrowDropright} from 'react-icons/io';
 
-export default function Model() {
+export default function Model1() {
     return (
         <div className="Total">
             <div className="inside">
@@ -37,7 +37,7 @@ export default function Model() {
            <span>Shift + Ctrl + S</span> 
         </div>
         <div className="textGrid">
-            <span>Print...</span>
+            <span>sjdn</span>
         </div>
         <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
         <div className="textGrid">

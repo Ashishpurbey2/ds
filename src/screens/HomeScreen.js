@@ -135,11 +135,11 @@ const HomeScreen = () => {
           }}
         >
           {modalLayerisOpen ? (
-            <h1>Layer</h1>
+            <h2 style={{color:"black", textAlign:"center", fontWeight:"lighter"}}>Layer</h2>
           ) : modalLibraryisOpen ? (
-            <h1>Library</h1>
+            <h2 style={{color:"black", textAlign:"center", fontWeight:"lighter"}}>Library</h2>
           ) : (
-            <h1>Transform</h1>
+            <h2 style={{color:"black", textAlign:"center", fontWeight:"lighter"}}>Transform</h2>
           )}
           {/* <h1>Layer</h1> */}
         </Modal>
