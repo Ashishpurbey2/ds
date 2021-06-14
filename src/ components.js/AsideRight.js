@@ -45,7 +45,7 @@ const AsideRight = () => {
         <p className='extraMargin'>uploads</p>
       </div>
       <div>
-        <img src='./images/img4.png' onClick={() => setmodalisOpen(true)}></img>
+        <img src='./images/Picture@1X.png' onClick={() => setmodalisOpen(true)}></img>
         <p className='extraMargin'>Pictures</p>
       </div>
       <div>
