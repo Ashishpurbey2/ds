@@ -73,5 +73,6 @@ export default function Model2() {
         </div>
         </div>
         </div>
+
     )
 }
