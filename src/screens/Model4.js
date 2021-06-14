@@ -7,52 +7,42 @@ export default function Model4() {
         <div className="Total">
             <div className="inside">
         <div className="textGrid">
-           <span>New...</span> 
-           <span>Ctrl + N</span> 
+           <span>Language</span> 
+           <span>
+            <IoMdArrowDropright size="25px"/>
+           </span> 
+           
         </div>
         <div className="textGrid">
-           <span>Open...</span> 
-           <span>Ctrl + 0</span> 
-        </div>
-        <div className="textGrid">
-           <span>Open More...</span>
+           <span>Theme</span> 
            <span>
             <IoMdArrowDropright size="25px"/>
            </span> 
         </div>
+        <div className="textGrid">
+           <span>Keyboard Shortcuts</span>
+           
+        </div>
         <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
         <div className="textGrid">
-           <span>Close...</span> 
-           <span>Alt + F4</span> 
+           <span>DS Tutorial...</span> 
         </div>
         <div className="textGrid">
-            <span>Rename...</span>
+            <span>DS Help...</span>
         </div >
+        <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
         <div className="textGrid">
-           <span>Save...</span> 
-           <span>Ctrl + S</span> 
+           <span>What's New...</span> 
+           
         </div>
         <div className="textGrid">
             <span>Save As...</span> 
            <span>Shift + Ctrl + S</span> 
         </div>
         <div className="textGrid">
-            <span>Print...</span>
+            <span>About DesignSheets</span>
         </div>
-        <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
-        <div className="textGrid">
-            <span>Export</span>
-            <span>
-            <IoMdArrowDropright size="25px"/>
-           </span>
-        </div>
-        <div className="textGrid">
-            <span>Export Layers</span>
-        </div>
-        <div style={{backgroundColor:'#A0A0A0',width:"124%",height:"1px",position:"relative",left:"-25px",margin:"5px"}}></div>
-        <div className="textGrid">
-            <span>File Info</span>
-        </div>
+        
         </div>
         </div>
     )
