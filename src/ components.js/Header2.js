@@ -47,6 +47,36 @@ const Header2 = (props) => {
         <img src='./images/object-alignment-to-the-center@1X.png'></img>
         <img src='./images/object-alignment-to-the-top@1X.png'></img>
         <img src='./images/horizontal-alignment@1X.png'></img>
+
+        <div
+          style={{
+            width: '0px',
+            height: '35px',
+            border: '1px solid #6E6E6E',
+            marginTop: '2px',
+            marginLeft: '13px',
+            marginRight: '10px',
+          }}
+          className='border1'
+        ></div>
+        <img src='./images/flip@1X.png' className='special'></img>
+        <img src='./images/flip@1X (1).png'></img>
+
+        <div
+          style={{
+            width: '0px',
+            height: '35px',
+            border: '1px solid #6E6E6E',
+            marginTop: '2px',
+            marginLeft: '13px',
+            marginRight: '10px',
+          }}
+          className='border1'
+        ></div>
+
+        <img src='./images/45@1X.png' className='special'></img>
+        <img src='./images/45@1X (1).png'></img>
+
       </div>
     </section>
   )
