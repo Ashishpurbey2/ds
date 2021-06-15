@@ -138,81 +138,42 @@ const HomeScreen = () => {
             <div>
             <h2 style={{color:"black", textAlign:"center", fontWeight:"lighter"}}>Layers</h2>
 
-            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/picture@1X (1).png'></img>     Picture</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/picture@1X (1).png'></img>     Picture</span>
-
-
-
-
-
-
+            <span style={{color:"black", display:"flex"}}><img src='./images/picture@1X (1).png' style={{margin:"1% 2% 0 0"}}></img>Picture</span>
+	    <br/>
+            <span style={{color:"black", display:"flex"}}><img src='./images/text-button@1X.png' style={{margin:"1% 2% 0 1%"}}></img>Text</span>
+            <br/>
+            <span style={{color:"black", display:"flex"}}><img src='./images/picture@1X (1).png' style={{margin:"1% 2% 0 0"}}></img>Picture</span>
+	    <br/>
+            <span style={{color:"black", display:"flex"}}><img src='./images/picture@1X (1).png' style={{margin:"1% 2% 0 0"}}></img>Picture</span>
+	    <br/>
+	    <span style={{color:"black", display:"flex"}}><img src='./images/text-button@1X.png' style={{margin:"1% 2% 0 1%"}}></img>Text</span>
             </div>
           ) :
            modalLibraryisOpen ? (
              <div>
             <h2 style={{color:"black", textAlign:"center", fontWeight:"lighter"}}>Library</h2>
-            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/picture@1X (1).png'></img>     Picture</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/picture@1X (1).png'></img>     Picture</span>
-
-
-
-
-
-
+            <span style={{color:"black", display:"flex"}}><img src='./images/picture@1X (1).png' style={{margin:"1% 2% 0 0"}}></img>Picture</span>
+	    <br/>
+            <span style={{color:"black", display:"flex"}}><img src='./images/text-button@1X.png' style={{margin:"1% 2% 0 1%"}}></img>Text</span>
+            <br/>
+            <span style={{color:"black", display:"flex"}}><img src='./images/picture@1X (1).png' style={{margin:"1% 2% 0 0"}}></img>Picture</span>
+	    <br/>
+            <span style={{color:"black", display:"flex"}}><img src='./images/picture@1X (1).png' style={{margin:"1% 2% 0 0"}}></img>Picture</span>
+	    <br/>
+	    <span style={{color:"black", display:"flex"}}><img src='./images/text-button@1X.png' style={{margin:"1% 2% 0 1%"}}></img>Text</span>
             </div>
           ) : (<div>
             <h2 style={{color:"black", textAlign:"center", fontWeight:"lighter"}}>Transform</h2>
 
-            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/text-button@1X.png'></img>     Text</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/picture@1X (1).png'></img>     Picture</span>
-            <br></br>
-            <br></br>
-            <span style={{color:"black"}}><img src='./images/picture@1X (1).png'></img>     Picture</span>
-
-
-
-
-
-
+            <span style={{color:"black", display:"flex"}}><img src='./images/picture@1X (1).png' style={{margin:"1% 2% 0 0"}}></img>Picture</span>
+	    <br/>
+            <span style={{color:"black", display:"flex"}}><img src='./images/text-button@1X.png' style={{margin:"1% 2% 0 1%"}}></img>Text</span>
+            <br/>
+            <span style={{color:"black", display:"flex"}}><img src='./images/picture@1X (1).png' style={{margin:"1% 2% 0 0"}}></img>Picture</span>
+	    <br/>
+            <span style={{color:"black", display:"flex"}}><img src='./images/picture@1X (1).png' style={{margin:"1% 2% 0 0"}}></img>Picture</span>
+	    <br/>
+	    <span style={{color:"black", display:"flex"}}><img src='./images/text-button@1X.png' style={{margin:"1% 2% 0 1%"}}></img>Text</span>
             </div>
           )}
           {/* <h1>Layer</h1> */}
