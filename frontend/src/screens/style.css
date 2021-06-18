@@ -1,0 +1,30 @@
+.textGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #ffffff;
+  align-items: center;
+}
+.Total {
+  color: black;
+  position: absolute;
+  top: 6vh;
+  left: 5vw;
+  width: 15.5vw;
+}
+.inside {
+  background-color: #ffffff;
+  padding: 5% 10%;
+}
+.textGrid span:nth-child(2) {
+  text-align: right;
+}
+
+@media only screen and (max-width: 1000px) {
+  .Total {
+    color: black;
+    position: absolute;
+    top: 6vh;
+    left: 20vw;
+    width: 35.5vw;
+  }
+}
