@@ -50,7 +50,7 @@ app.get("/", (req, res) => {
       console.log(err);
       res.status(500).send("An error occurred", err);
     } else {
-      res.render("../frontend/src/index.js", { items: items });
+      res.render("../frontend/src/index", { items: items });
     }
   });
 });
