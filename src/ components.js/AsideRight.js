@@ -42,6 +42,7 @@ const AsideRight = () => {
   // };
 
   const fileOnChange = (event) => {
+    console.log(event.target.files[0]);
     SetImage(event.target.files[0]);
   };
 
@@ -60,21 +61,21 @@ const AsideRight = () => {
       });
   };
 
-  // function imageRender() {
-  //   for (var i = 0; i < imgsrc.length; i++) {
-  //     return (
-  //       <img
-  //         style={{
-  //           position: "relative",
-  //           top: "10%",
-  //           width: "60%",
-  //           left: "20%",
-  //         }}
-  //         src={URL.createObjectURL(imgsrc[i])}
-  //       />
-  //     );
-  //   }
-  // }
+  function imageRender() {
+    for (var i = 0; i < imgsrc.length; i++) {
+      return (
+        <img
+          style={{
+            position: "relative",
+            top: "10%",
+            width: "60%",
+            left: "20%",
+          }}
+          src={URL.createObjectURL(imgsrc[i])}
+        />
+      );
+    }
+  }
   window.onresize = myFunction;
   return (
     <div
