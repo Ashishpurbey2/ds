@@ -60,21 +60,21 @@ const AsideRight = () => {
       });
   };
 
-  function imageRender() {
-    for (var i = 0; i < imgsrc.length; i++) {
-      return (
-        <img
-          style={{
-            position: "relative",
-            top: "10%",
-            width: "60%",
-            left: "20%",
-          }}
-          src={URL.createObjectURL(imgsrc[i])}
-        />
-      );
-    }
-  }
+  // function imageRender() {
+  //   for (var i = 0; i < imgsrc.length; i++) {
+  //     return (
+  //       <img
+  //         style={{
+  //           position: "relative",
+  //           top: "10%",
+  //           width: "60%",
+  //           left: "20%",
+  //         }}
+  //         src={URL.createObjectURL(imgsrc[i])}
+  //       />
+  //     );
+  //   }
+  // }
   window.onresize = myFunction;
   return (
     <div
@@ -137,7 +137,7 @@ const AsideRight = () => {
 
           <center>
             <label
-              class="custom-file-upload"
+              className="custom-file-upload"
               style={{
                 borderRadius: "15px",
                 width: "0rem",
@@ -158,11 +158,13 @@ const AsideRight = () => {
                 accept=".png, .jpg, .jpeg"
                 name="photo"
                 onChange={fileOnChange}
-                onClick={sendImage}
               />
               Upload Media
               {/* <button style={{borderRadius:"5px", width:"10rem", backgroundColor:"white"}} Upload Media</button> */}
             </label>
+            <br></br>
+            <br></br>
+            <button onClick={sendImage}>Submit</button>
           </center>
 
           {imgsrc !== null
