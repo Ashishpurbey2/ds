@@ -6,7 +6,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 Modal.setAppElement("#root");
 const AsideRight = () => {
-  const [imgsrc, SetImage] = useState(null);
+  const [imgsrc, SetImage] = useState({});
   const [width, setWidth] = useState(window.innerWidth - 90);
   const [modalisOpen, setmodalisOpen] = useState(false);
   const [width1, setWidth1] = useState(window.innerWidth - 90);
@@ -17,28 +17,52 @@ const AsideRight = () => {
   }
 
   const [newUser, setNewUser] = useState({
-    name: "",
-    birthdate: "",
     photo: "",
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append("photo", newUser.photo);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const formData = new FormData();
+  //   formData.append("photo", newUser.photo);
 
-    axios
-      .post("http://localhost:3000/users/add/", formData)
-      .then((res) => {
-        console.log(res);
+  //   axios
+  //     .post("http://localhost:3000/users/add/", formData)
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
+
+  // const handlePhoto = (e) => {
+  //   setNewUser({ ...newUser, photo: e.target.files[0] });
+  // };
+
+  const fileOnChange = (event) => {
+    console.log(event.target.files);
+    SetImage(event.target.files);
+  };
+
+  const sendImage = (event) => {
+    let formData = new FormData();
+
+    console.log(imgsrc[0]);
+    formData.append("image", imgsrc[0]);
+    console.log(formData);
+
+    fetch("http://localhost:3000/uploadFile", {
+      method: "post",
+      body: formData,
+      enctype: "multipart/form-data",
+    })
+      .then((res) => res.text())
+      .then((resBody) => {
+        console.log(resBody);
       })
       .catch((err) => {
         console.log(err);
       });
-  };
-
-  const handlePhoto = (e) => {
-    setNewUser({ ...newUser, photo: e.target.files[0] });
   };
 
   function imageRender() {
@@ -115,36 +139,37 @@ const AsideRight = () => {
           }}
         >
           <br />
-          <form onSubmit={handleSubmit} encType="multipart/form-data">
-            <center>
-              <label
-                class="custom-file-upload"
-                style={{
-                  borderRadius: "8px",
-                  width: "15rem",
-                  backgroundColor: "white",
-                  border: "1px solid black",
-                  color: "black",
-                  padding: "2%",
-                }}
-                onChange={(e) => {
-                  console.log(e.target.files);
-                  SetImage(e.target.files);
-                }}
-              >
-                <input
-                  type="file"
-                  style={{ display: "none" }}
-                  multiple
-                  accept=".png, .jpg, .jpeg"
-                  name="photo"
-                  onChange={handlePhoto}
-                />
-                Upload Media
-              </label>
+
+          <center>
+            <label
+              className="custom-file-upload"
+              style={{
+                borderRadius: "15px",
+                width: "0rem",
+                backgroundColor: "white",
+                border: "2px solid black",
+                color: "black",
+                padding: "5%",
+              }}
+              // onChange={(e) => {
+              //   console.log(e.target.files);
+              //   SetImage(e.target.files);
+              // }}
+            >
+              <input
+                type="file"
+                name="image"
+                style={{ display: "none" }}
+                onChange={fileOnChange}
+              />
+              Upload Media
               {/* <button style={{borderRadius:"5px", width:"10rem", backgroundColor:"white"}} Upload Media</button> */}
-            </center>
-          </form>
+            </label>
+            <br></br>
+            <br></br>
+            <button onClick={sendImage}>Submit</button>
+          </center>
+
           {imgsrc !== null
             ? Array.from(imgsrc).map((src) => (
                 <img
